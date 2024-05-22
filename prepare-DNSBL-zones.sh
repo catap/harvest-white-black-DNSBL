@@ -4,8 +4,8 @@
 # Small script which prepares DNSBL zoens
 #
 
-SPAM_FILTER="mailbox Junk SEEN SINCE 7d"
-HAM_FILTER="NOT mailbox Junk SEEN SINCE 30d"
+SPAM_FILTER="NOT mailbox Trash* mailbox Junk* SEEN SINCE 7d"
+HAM_FILTER="NOT mailbox Trash* NOT mailbox Junk* NOT mailbox virtual.* SEEN SINCE 30d"
 
 BLACKLIST=/var/rbldnsd/bl.local.zone
 WHITELIST=/var/rbldnsd/wl.local.zone
